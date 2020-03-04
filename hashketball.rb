@@ -139,7 +139,7 @@ end
 def long_name_steals_a_ton?
   # get name of player with the longest name
   longest_name = player_with_longest_name
-  players = all_players($teams)
+  players = all_players(game_hash)
   sorted_by_steals = players.sort_by { |player| player[:steals] }
   # Compare sort_by_steals and longest_name player's steals
   sorted_by_steals[-1][:player_name] == longest_name
