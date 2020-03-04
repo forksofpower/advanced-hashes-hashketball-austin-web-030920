@@ -115,9 +115,8 @@ def most_points_scored
 end
 
 def winning_team
-  teams = $teams
   scores = []
-  teams.each do |team_key,team|
+  game_hash.each do |team_key,team|
     # add up player points for each team
     sum_result = team[:players].reduce(0) { |sum, player| sum += player[:points] }
     scores << { :team_name => team[:team_name], :score => sum_result }
