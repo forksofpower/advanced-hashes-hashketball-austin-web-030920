@@ -70,7 +70,7 @@ end
 
 def team_names
   names = []
-  $teams.each do |team_key, team|
+  game_hash.each do |team_key, team|
     names << team[:team_name]
   end
 
@@ -80,7 +80,7 @@ end
 def player_numbers(team_name)
   numbers = []
 
-  $teams.each do |team_key, team|
+  game_hash.each do |team_key, team|
     if (team[:team_name] == team_name)
       # create a new array of Jersey numbers from array of players
       numbers = team[:players].map { |player| player[:number] }
