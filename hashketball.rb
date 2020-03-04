@@ -43,7 +43,7 @@ end
 
 # unused
 def find_team_by_name(team_name)
-  $teams.each do |team_key, team|
+  game_hash.each do |team_key, team|
     return team if team[:team_name] == team_name
   end
 end
