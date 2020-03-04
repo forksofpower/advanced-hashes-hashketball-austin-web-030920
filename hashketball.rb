@@ -32,7 +32,7 @@ end
 
 def find_player_by_name(player_name)
   # get array of all players
-  players = all_players($teams)
+  players = all_players(game_hash)
   # iterate players array until player is found
   players.each do |player|
     if player[:player_name] == player_name
