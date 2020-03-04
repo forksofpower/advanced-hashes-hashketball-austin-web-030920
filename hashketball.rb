@@ -130,7 +130,7 @@ def winning_team
 end
 
 def player_with_longest_name
-  players = all_players($teams)
+  players = all_players(game_hash)
 
   sorted = players.sort_by { |player| player[:player_name].length }
   sorted[-1][:player_name]
