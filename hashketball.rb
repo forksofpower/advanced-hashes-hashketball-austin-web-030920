@@ -41,6 +41,7 @@ def find_player_by_name(player_name)
   end
 end
 
+# unused
 def find_team_by_name(team_name)
   $teams.each do |team_key, team|
     return team if team[:team_name] == team_name
